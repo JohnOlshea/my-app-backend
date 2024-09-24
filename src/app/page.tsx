@@ -15,23 +15,23 @@ const newOnStreaming = [
   {
     id: 1,
     title: 'Movie Title 1',
-    description: 'Best Movie',
+    description: 'Best Movie for movie title 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 7.7,
     releaseDate: 'July 26, 2024',
     imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
   },
   {
     id: 2,
-    title: 'Movie Title 2',
-    description: 'New Best Movie',
+    title: 'Ted 2',
+    description: 'When you are in this realm New Best Movie for title 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 2.9,
     releaseDate: 'July 26, 2024',
     imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
   },
   {
     id: 3,
-    title: 'Movie Title 3',
-    description: 'Best Movie',
+    title: 'Inception',
+    description: 'A man trying to make a movie Title 3 for the next title of the third Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 4.5,
     releaseDate: 'July 26, 2024',
     imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
@@ -125,6 +125,8 @@ export default function Home() {
           alt="Hero image showcasing popular movies"
           layout="fill"
           objectFit="cover"
+          w
+          h
           // lazyload
         /> */}
         <div className="absolute bottom-[13%] lg:bottom-[19%] left-[5%]">
@@ -162,13 +164,6 @@ export default function Home() {
         <Button disabled>
           Unavailable
         </Button>
-      </div>
-
-      <div className='text-white' onClick={() => handleOpenMovie(newOnStreaming[0])}>
-        test0
-      </div>
-      <div className='text-white' onClick={() => handleOpenMovie(newOnStreaming[1])}>
-        test1
       </div>
 
       {activeMovie && (
@@ -212,9 +207,24 @@ export default function Home() {
         </div>
       </section>
 
-      <MovieSection title="Playing now" movies={newOnStreaming} count={newOnStreaming.length} />
-      <MovieSection title="Coming soon" movies={newOnStreaming} count={newOnStreaming.length} />
-      <MovieSection title="Popular this week" movies={newOnStreaming} count={newOnStreaming.length} />
+      <MovieSection
+        title="Playing now"
+        movies={newOnStreaming}
+        count={newOnStreaming.length}
+        handleOpenMovie={() => handleOpenMovie(newOnStreaming[0])}
+      />
+      <MovieSection
+        title="Coming soon"
+        movies={newOnStreaming}
+        count={newOnStreaming.length}
+        handleOpenMovie={() => handleOpenMovie(newOnStreaming[1])}
+      />
+      <MovieSection
+        title="Popular this week"
+        movies={newOnStreaming}
+        count={newOnStreaming.length}
+        handleOpenMovie={() => handleOpenMovie(newOnStreaming[2])}
+      />
 
       {/* Footer */}
       <footer className="text-white mt-2">

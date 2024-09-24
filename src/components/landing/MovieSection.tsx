@@ -12,9 +12,10 @@ interface MovieSectionProps {
   title: string;
   movies: Movie[];
   count: number;
+  handleOpenMovie: () => void;
 }
 
-const MovieSection: React.FC<MovieSectionProps> = ({ title, movies, count }) => {
+const MovieSection: React.FC<MovieSectionProps> = ({ title, movies, count, handleOpenMovie }) => {
   return (
     <section className="mb-8">
       <h2 className="text-white text-2xl font-bold flex justify-between items-center mb-4">
@@ -23,7 +24,11 @@ const MovieSection: React.FC<MovieSectionProps> = ({ title, movies, count }) => 
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
         {movies.map((movie) => (
-          <div key={movie.id} className="relative rounded-lg bg-[#292a3e] aspect-[2/3] overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg hover:brightness-110">
+          <div
+            onClick={handleOpenMovie}
+            key={movie.id}
+            className="relative rounded-lg bg-[#292a3e] aspect-[2/3] overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg hover:brightness-110"
+          >
             {/* <Image
               src={movie.imageUrl}
               alt={`Movie poster ${movie.title}`}
