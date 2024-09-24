@@ -64,9 +64,8 @@ interface Movie {
 }
 
 export default function Home() {
-  // const [activeMovie, setActiveMovie] = useState<Movie | null>(null);
-  const [activeMovie, setActiveMovie] = useState<Movie>(newOnStreaming[0]);
-  const [isModalOpen, setIsModalOpen] = useState<boolean>(true);
+  const [activeMovie, setActiveMovie] = useState<Movie | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   const handleOpenMovie = (movie: Movie) => {
     setActiveMovie(movie);
@@ -166,64 +165,32 @@ export default function Home() {
         </Button>
       </div>
 
-      {activeMovie && (
-        <Suspense fallback={<div>Loading...</div>}>
-          <MovieDetailModal
-            open={isModalOpen}
-            setOpen={setIsModalOpen}
-            movie={activeMovie}
-          />
-        </Suspense>
-      )}
+
 
       {/* New on streaming section */}
-      <section className="mb-8">
-        <h2 className="text-white text-2xl font-bold flex justify-between items-center mb-4">
-          New on streaming
-          <span className="text-base font-normal">(12)</span>
-        </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-          {Array(5).fill(0).map((_, index) => (
-            <div key={index} className="relative rounded-lg bg-[#292a3e] aspect-[2/3]">
-              {/* <Image
-                src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg"
-                alt={`Movie poster ${index + 1}`}
-                layout="fill"
-                objectFit="cover"
-                // lazy
-              /> */}
-              <div className="absolute inset-0 flex flex-col justify-between p-4">
-                <div className="flex justify-between items-center">
-                  <span className="bg-[#e50913] flex justify-center items-center h-7 w-7 rounded-full font-extrabold p-1 text-xl">N</span>
-                  <p className="text-white font-bold">7.7</p>
-                </div>
-                <div className="">
-                  <p className="text-[#f5c618] text-xs mb-1">July 26, 2024</p>
-                  <h3 className="text-white">Movie title comes here</h3>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
       <MovieSection
-        title="Playing now"
+        title="New on streaming"
         movies={newOnStreaming}
         count={newOnStreaming.length}
         handleOpenMovie={() => handleOpenMovie(newOnStreaming[0])}
       />
       <MovieSection
-        title="Coming soon"
+        title="Playing now"
         movies={newOnStreaming}
         count={newOnStreaming.length}
         handleOpenMovie={() => handleOpenMovie(newOnStreaming[1])}
       />
       <MovieSection
-        title="Popular this week"
+        title="Coming soon"
         movies={newOnStreaming}
         count={newOnStreaming.length}
         handleOpenMovie={() => handleOpenMovie(newOnStreaming[2])}
+      />
+      <MovieSection
+        title="Popular this week"
+        movies={newOnStreaming}
+        count={newOnStreaming.length}
+        handleOpenMovie={() => handleOpenMovie(newOnStreaming[3])}
       />
 
       {/* Footer */}
@@ -252,6 +219,16 @@ export default function Home() {
           <li><Link href="/" className="hover:underline">Contact us</Link></li>
         </ul>
       </footer>
+
+      {activeMovie && (
+        <Suspense fallback={<div>Loading...</div>}>
+          <MovieDetailModal
+            open={isModalOpen}
+            setOpen={setIsModalOpen}
+            movie={activeMovie}
+          />
+        </Suspense>
+      )}
     </div>
   );
 }

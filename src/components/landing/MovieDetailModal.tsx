@@ -29,6 +29,28 @@ interface MovieDetailModalProps {
   movie: Movie;
 }
 
+//  VisuallyHidden component to hide elements but make them accessible.
+// Place in component
+const VisuallyHidden: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  return (
+    <span
+      style={{
+        border: 0,
+        clip: "rect(0, 0, 0, 0)",
+        height: "1px",
+        margin: "-1px",
+        overflow: "hidden",
+        padding: 0,
+        position: "absolute",
+        width: "1px",
+        whiteSpace: "nowrap",
+      }}
+    >
+      {children}
+    </span>
+  );
+};
+
 // const MovieDetailModal: React.FC<MovieDetailModalProps> = ({ open, setOpen, movie }) => {
 // };
 
@@ -36,6 +58,13 @@ const MovieDetailModal: React.FC<MovieDetailModalProps> = React.memo(({ open, se
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogContent>
+
+        <VisuallyHidden>
+          <DialogHeader>
+            <DialogTitle>{movie.title}</DialogTitle>
+            <DialogDescription>{movie.description}</DialogDescription>
+          </DialogHeader>
+        </VisuallyHidden>
 
         <div className="flex justify-start lg:justify-between flex-col lg:flex-row lg:gap-10">
           <div className="w-[170px] h-[240px] hidden lg:block">
@@ -93,7 +122,6 @@ const MovieDetailModal: React.FC<MovieDetailModalProps> = React.memo(({ open, se
             <span className="w-5 h-5 rounded-full bg-white"></span>
           </div>
         </div>
-
       </DialogContent>
     </Dialog>
   );
