@@ -69,7 +69,7 @@ const MovieDetailModal: React.FC<MovieDetailModalProps> = React.memo(({ open, se
         <div className="flex justify-start lg:justify-between flex-col lg:flex-row lg:gap-10">
           <div className="w-[170px] h-[240px] hidden lg:block">
             <Image
-              src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727086650/mg0nhohci0jacmrgixpq.png"
+              src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/a4a30khcoc8lyd5u4lem"
               alt="Movie detail"
               width={170}
               height={240}

@@ -26,7 +26,6 @@ const newOnStreaming = [
     description: 'When you are in this realm New Best Movie for title 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 2.9,
     releaseDate: 'July 26, 2024',
-    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
   },
   {
     id: 3,
@@ -34,7 +33,6 @@ const newOnStreaming = [
     description: 'A man trying to make a movie Title 3 for the next title of the third Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 4.5,
     releaseDate: 'July 26, 2024',
-    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
   },
   {
     id: 4,
@@ -42,7 +40,6 @@ const newOnStreaming = [
     description: 'Best Movie',
     rating: 8.3,
     releaseDate: 'July 26, 2024',
-    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
   },
   {
     id: 5,
@@ -50,7 +47,6 @@ const newOnStreaming = [
     description: 'Best Movie',
     rating: 9.0,
     releaseDate: 'July 26, 2024',
-    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
   },
 ];
 
@@ -60,7 +56,7 @@ interface Movie {
   rating: number;
   description: string;
   releaseDate: string;
-  imageUrl: string;
+  imageUrl?: string;
 }
 
 export default function Home() {
@@ -122,12 +118,20 @@ export default function Home() {
         {/* <Image
           src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727086650/mg0nhohci0jacmrgixpq.png"
           alt="Hero image showcasing popular movies"
-          layout="fill"
           objectFit="cover"
           w
           h
           // lazyload
         /> */}
+        <Image
+          src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/xjs2t2z7n4bbsv1ouump"
+          alt="Hero image showcasing popular movies"
+          width={1220}
+          height={340}
+          className="object-cover h-full rounded-xl brightness-50"
+          loading="lazy"  // Lazy load images for performance
+        />
+        
         <div className="absolute bottom-[13%] lg:bottom-[19%] left-[5%]">
           <p className="text-[#f5c618] lg:mb-2 text-sm lg:text-base">June 1, 2024
             <span className="text-white ml-2">|</span>
@@ -164,8 +168,6 @@ export default function Home() {
           Unavailable
         </Button>
       </div>
-
-
 
       {/* New on streaming section */}
       <MovieSection

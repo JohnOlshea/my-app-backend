@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 interface Movie {
@@ -5,7 +6,7 @@ interface Movie {
   title: string;
   rating: number;
   releaseDate: string;
-  imageUrl: string;
+  imageUrl?: string;
 }
 
 interface MovieSectionProps {
@@ -32,11 +33,25 @@ const MovieSection: React.FC<MovieSectionProps> = ({ title, movies, count, handl
             {/* <Image
               src={movie.imageUrl}
               alt={`Movie poster ${movie.title}`}
-              fill
               className="object-cover rounded-lg transition duration-300 ease-in-out"
               loading="lazy"  // Lazy load images for performance
               quality={75}    // Lower image quality for faster load (optional)
             /> */}
+
+            {movie.imageUrl && (
+              <Image
+                src={movie.imageUrl}
+                alt={`Movie poster ${title}`}
+                className="object-cover h-full rounded-lg transition duration-300 ease-in-out"
+                width={300} // Set fixed width and height
+                height={450}
+                quality={80} // Optimize image quality
+                loading="lazy"
+                // placeholder="blur"
+                // blurDataURL="/api/placeholder/300/450" // Placeholder image
+              />
+            )}
+
             <div className="absolute inset-0 flex flex-col justify-between p-4">
               <div className="flex justify-between items-center">
                 <span className="bg-[#e50913] flex justify-center items-center h-7 w-7 rounded-full font-extrabold p-1 text-xl">N</span>
