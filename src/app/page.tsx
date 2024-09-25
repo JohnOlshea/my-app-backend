@@ -115,8 +115,16 @@ export default function Home() {
 
       {/* Hero section */}
       <section className="bg-[#701a25] relative rounded-xl overflow-hidden h-[20.21rem] mb-[50px]">
+        {/* <Image
+          src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727086650/mg0nhohci0jacmrgixpq.png"
+          alt="Hero image showcasing popular movies"
+          objectFit="cover"
+          w
+          h
+          // lazyload
+        /> */}
         <Image
-          src="hhttps://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/cs5kkujub9l1r7nzaw8u"
+          src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/cs5kkujub9l1r7nzaw8u"
           alt="Hero image showcasing popular movies"
           width={1220}
           height={340}
