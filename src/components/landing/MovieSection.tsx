@@ -16,6 +16,15 @@ interface MovieSectionProps {
   handleOpenMovie: () => void;
 }
 
+const containerStyle = {
+  background:
+    "linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(255, 255, 255, 0))",
+};
+
+const tagStyle = {
+  boxShadow: "0px 0px 8px -1px #000"
+}
+
 const MovieSection: React.FC<MovieSectionProps> = ({ title, movies, count, handleOpenMovie }) => {
   return (
     <section className="mb-8">
@@ -45,12 +54,15 @@ const MovieSection: React.FC<MovieSectionProps> = ({ title, movies, count, handl
               />
             )}
 
-            <div className="absolute inset-0 flex flex-col justify-between p-4">
-              <div className="flex justify-between items-center">
-                <span className="bg-[#e50913] flex justify-center items-center h-7 w-7 rounded-full font-extrabold p-1 text-xl">N</span>
+            <div className="absolute inset-0 flex flex-col justify-between">
+              <div className="flex justify-between items-center p-4">
+                <span style={movie.imageUrl ? tagStyle : {}} className="bg-[#e50913] flex justify-center items-center h-7 w-7 rounded-full font-extrabold p-1 text-xl">N</span>
                 <p className="text-white font-bold">{movie.rating}</p>
               </div>
-              <div>
+              <div
+                style={movie.imageUrl ? containerStyle : {}}
+                className="px-4 pt-[60%] pb-4"
+              >
                 <p className="text-[#f5c618] text-xs mb-1">{movie.releaseDate}</p>
                 <h3 className="text-white">{movie.title}</h3>
               </div>

@@ -18,7 +18,7 @@ const newOnStreaming = [
     description: 'Best Movie for movie title 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 7.7,
     releaseDate: 'July 26, 2024',
-    // imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/bp0qoedrryf2onqnrozn',
+    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/bp0qoedrryf2onqnrozn',
   },
   {
     id: 2,
@@ -26,6 +26,7 @@ const newOnStreaming = [
     description: 'When you are in this realm New Best Movie for title 2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 2.9,
     releaseDate: 'July 26, 2024',
+    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/iibv0pbfcgxplolnunid',
   },
   {
     id: 3,
@@ -33,6 +34,7 @@ const newOnStreaming = [
     description: 'A man trying to make a movie Title 3 for the next title of the third Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 4.5,
     releaseDate: 'July 26, 2024',
+    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/i1kddne9aopfi1wmajig',
   },
   {
     id: 4,
@@ -86,13 +88,13 @@ export default function Home() {
         <nav className="lg:col-start-2 lg:col-span-1 mt-4 lg:mt-0">
           <ul className="flex gap-5">
             <li>
-              <Link className="text-[#e5241a] font-semibold" href="/">Calendar</Link>
+              <Link className="text-[#e5241a] hover:text-[#e5241a] transition font-semibold" href="/">Calendar</Link>
             </li>
             <li>
-              <Link className="text-white font-semibold" href="/">Latest reboots</Link>
+              <Link className="text-white hover:text-[#e5241a] transition font-semibold" href="/">Latest reboots</Link>
             </li>
             <li>
-              <Link className="text-white font-semibold" href="/">Latest Sequels</Link>
+              <Link className="text-white hover:text-[#e5241a] transition font-semibold" href="/">Latest Sequels</Link>
             </li>
           </ul>
         </nav>
