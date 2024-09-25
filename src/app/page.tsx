@@ -18,7 +18,7 @@ const newOnStreaming = [
     description: 'Best Movie for movie title 1 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, hic? Modi enim numquam tenetur, voluptatum debitis fuga. Illum, nobis modi. Nobis, vero! Ipsa, deleniti blanditiis nostrum ab eius laboriosam facilis.',
     rating: 7.7,
     releaseDate: 'July 26, 2024',
-    imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/v1727087693/ixkzevvaqd8eu90gmq90.jpg',
+    // imageUrl: 'https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/bp0qoedrryf2onqnrozn',
   },
   {
     id: 2,
@@ -98,8 +98,8 @@ export default function Home() {
         </nav>
 
         <div className="flex justify-center lg:justify-start gap-2 lg:ml-10 row-start-3 lg:row-auto lg:col-start-3">
-          <Button href="/" size="large" variant="primary">
-            AppStore
+          <Button href="/dashboard" size="large" variant="primary">
+            Dashboard
           </Button>
           <Button href="/" size="large" variant="primary">
             Google Play

@@ -20,7 +20,7 @@ interface Movie {
   rating: number;
   description: string;
   releaseDate: string;
-  imageUrl: string;
+  imageUrl?: string;
 }
 
 interface MovieDetailModalProps {
@@ -106,7 +106,7 @@ const MovieDetailModal: React.FC<MovieDetailModalProps> = React.memo(({ open, se
             </div>
             <div className="flex justify-between">
               <p className="w-[11rem]">Producers</p>
-              <p className="w-[12rem]">Smite my Bell, Louis D'espacito, George Deweee</p>
+              <p className="w-[12rem]">Smite my Bell, Louis D&apos;espacito, George Deweee</p>
             </div>
             <div className="flex justify-between">
               <p className="w-[11rem]">Writers</p>

@@ -30,13 +30,6 @@ const MovieSection: React.FC<MovieSectionProps> = ({ title, movies, count, handl
             key={movie.id}
             className="relative rounded-lg bg-[#292a3e] aspect-[2/3] overflow-hidden cursor-pointer transform transition duration-300 hover:scale-105 hover:shadow-lg hover:brightness-110"
           >
-            {/* <Image
-              src={movie.imageUrl}
-              alt={`Movie poster ${movie.title}`}
-              className="object-cover rounded-lg transition duration-300 ease-in-out"
-              loading="lazy"  // Lazy load images for performance
-              quality={75}    // Lower image quality for faster load (optional)
-            /> */}
 
             {movie.imageUrl && (
               <Image
