@@ -257,7 +257,7 @@ export default function Dashboard() {
                 className="overflow-hidden rounded-full"
               >
                 <Image
-                  src="/placeholder-user.jpg"
+                  src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727233519/mevrzzwrrw5m5ahxl3ur.jpg"
                   width={36}
                   height={36}
                   alt="Avatar"

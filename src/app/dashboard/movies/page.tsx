@@ -250,7 +250,7 @@ export default function Movies() {
                   className="overflow-hidden rounded-full"
                 >
                   <Image
-                    src="/placeholder-user.jpg"
+                    src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727233519/mevrzzwrrw5m5ahxl3ur.jpg"
                     width={36}
                     height={36}
                     alt="Avatar"
@@ -353,7 +353,7 @@ export default function Movies() {
                               alt="Product image"
                               className="aspect-square rounded-md object-cover"
                               height="64"
-                              src="/placeholder.svg"
+                              src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
                               width="64"
                             />
                           </TableCell>
@@ -398,7 +398,7 @@ export default function Movies() {
                               alt="Product image"
                               className="aspect-square rounded-md object-cover"
                               height="64"
-                              src="/placeholder.svg"
+                              src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
                               width="64"
                             />
                           </TableCell>
@@ -443,7 +443,7 @@ export default function Movies() {
                               alt="Product image"
                               className="aspect-square rounded-md object-cover"
                               height="64"
-                              src="/placeholder.svg"
+                              src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
                               width="64"
                             />
                           </TableCell>
@@ -488,7 +488,7 @@ export default function Movies() {
                               alt="Product image"
                               className="aspect-square rounded-md object-cover"
                               height="64"
-                              src="/placeholder.svg"
+                              src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
                               width="64"
                             />
                           </TableCell>
@@ -533,7 +533,7 @@ export default function Movies() {
                               alt="Product image"
                               className="aspect-square rounded-md object-cover"
                               height="64"
-                              src="/placeholder.svg"
+                              src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
                               width="64"
                             />
                           </TableCell>
@@ -578,7 +578,7 @@ export default function Movies() {
                               alt="Product image"
                               className="aspect-square rounded-md object-cover"
                               height="64"
-                              src="/placeholder.svg"
+                              src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/qpzixtgr2tnfw7un6ofa"
                               width="64"
                             />
                           </TableCell>

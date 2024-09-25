@@ -115,16 +115,8 @@ export default function Home() {
 
       {/* Hero section */}
       <section className="bg-[#701a25] relative rounded-xl overflow-hidden h-[20.21rem] mb-[50px]">
-        {/* <Image
-          src="https://res.cloudinary.com/dc3apwy48/image/upload/v1727086650/mg0nhohci0jacmrgixpq.png"
-          alt="Hero image showcasing popular movies"
-          objectFit="cover"
-          w
-          h
-          // lazyload
-        /> */}
         <Image
-          src="https://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/xjs2t2z7n4bbsv1ouump"
+          src="hhttps://res.cloudinary.com/dc3apwy48/image/upload/f_auto,q_auto/cs5kkujub9l1r7nzaw8u"
           alt="Hero image showcasing popular movies"
           width={1220}
           height={340}
@@ -159,9 +151,9 @@ export default function Home() {
         </Button>
 
         {/* With custom class */}
-        <Button variant="outline" className="uppercase">
+        {/* <Button variant="outline" className="uppercase">
           Amazon
-        </Button>
+        </Button> */}
 
         {/* Disabled button */}
         <Button disabled>
@@ -211,7 +203,7 @@ export default function Home() {
             </Link>
           </div>
         </div>
-        <p className="text-[0.65rem] lg:text-xs lg:text-xs mb-2">
+        <p className="lg:text-xs lg:text-xs mb-2">
           This application uses TMDB APIs but is not endorsed, certified, or otherwise approved Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem illo repudiandae commodi laborum eos, sed blanditiis impedit architecto! Amet eveniet voluptas sapiente quisquam, totam ratione consectetur nihil consequuntur sit quis.
         </p>
         <ul className="flex flex-wrap gap-4 text-xs lg:text-sm">
